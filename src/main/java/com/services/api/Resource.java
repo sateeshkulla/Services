@@ -25,12 +25,12 @@ public interface Resource {
 	 */
 	@GET
 	@Path("/vehicles")
-	@Produces(MediaType.APPLICATION_JSON)
+	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	List<Vehicle> getVehicles();
 	
 	@GET
 	@Path("/vehicles/{vehicleId}")
-	@Produces(MediaType.APPLICATION_JSON)
+	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	Vehicle getVehicle(@PathParam("vehicleId") Long vehicleId);
 	
 	@POST
